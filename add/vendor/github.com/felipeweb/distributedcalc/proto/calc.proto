@@ -1,0 +1,27 @@
+syntax = "proto3";
+package proto;
+
+message OpRequest {
+    double Left = 1;
+    double Right = 2;
+}
+
+message ResultResponse {
+    double Result = 1;
+}
+
+service Add {
+    rpc Add (OpRequest) returns (ResultResponse);
+}
+
+service Sub {
+    rpc Sub (OpRequest) returns (ResultResponse);
+}
+
+service Mul {
+    rpc Mul (OpRequest) returns (ResultResponse);
+}
+
+service Quo {
+    rpc Quo (OpRequest) returns (ResultResponse);
+}

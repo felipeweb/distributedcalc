@@ -1,0 +1,24 @@
+version: "3"
+services:
+  add:
+    build: ./add
+    container_name: "add"
+  sub:
+    build: ./sub
+    container_name: "sub"
+  mul:
+    build: ./mul
+    container_name: "mul"
+  quo:
+    build: ./quo
+    container_name: "quo"
+  calc:
+    build: ./calc
+    container_name: "calc"
+    environment:
+      - ADD_SERVICE_ADDR=add:8080
+      - SUB_SERVICE_ADDR=sub:8080
+      - MUL_SERVICE_ADDR=mul:8080
+      - QUO_SERVICE_ADDR=quo:8080
+    ports:
+      - "8080:8080"
