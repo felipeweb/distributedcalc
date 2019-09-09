@@ -7,10 +7,10 @@
 
 ## Serviços internos
 
-- Add: Serviço GRPC responsável pela operação de soma
-- Sub: Serviço GRPC responsável pela operação de subtração
-- Mul: Serviço GRPC responsável pela operação de multiplicação
-- Quo: Serviço GRPC responsável pela operação de divisão
+- **Add**: Serviço GRPC responsável pela operação de soma
+- **Sub**: Serviço GRPC responsável pela operação de subtração
+- **Mul**: Serviço GRPC responsável pela operação de multiplicação
+- **Quo**: Serviço GRPC responsável pela operação de divisão
 
 ## Serviços publicos
 
@@ -28,7 +28,7 @@ docker-compose up
 curl -i -X PUT \
    -H "Content-Type:application/json" \
    -d \
-'{"expression": "X-(2Y+(X/Y))","variables":{"X":8,"Y":4}} ' \
+'{"expression": "X+(2Y+(X/Y))","variables":{"X":8,"Y":4}} ' \
  'http://localhost:8080'
 ```
 
